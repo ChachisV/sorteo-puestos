@@ -1,9 +1,9 @@
 let modulos = [];
 let min = 1;
 let max = 0;
-let consultor = "";
 const botonModulos = document.querySelector("#botonModulos");
-
+const seccionModulos = document.querySelector(".section-modulos");
+const moduloFinal = document.querySelector(".modulos-finales")
 
 
 function aleatorio(min, max){
@@ -11,27 +11,65 @@ function aleatorio(min, max){
 }
 
 
-function escogerModulo(consultor){
+function escogerModulo(){
     let modulo = aleatorio(min, max);
+    let consultor = document.querySelector(".input-consultor").value;
+
     
 
-    if(!modulos.includes(modulo)){
-       modulos.push(modulo); 
+    if(!modulos.includes(modulo)){     
+      
+        modulos.push(modulo); 
        
+       const resultadoModulo = document.createElement("p");
+       resultadoModulo.innerText = (consultor + " en el módulo ");
 
-       return alert(consultor + " en el módulo " + modulo);
+       const moduloElegido = document.createElement("p");
+       moduloElegido.classList.add("modulo-final");
+       moduloElegido.innerText = (modulo)
+
+       moduloFinal.append(resultadoModulo, moduloElegido);
+          
+      
     }else{
         escogerModulo(consultor);
     }
+      
 }
 
-function seccionModulos(){
-    let max = document.querySelector("#valorModulos").value;
+
+// <section>
+// <p>Nombre del Consultor</p>
+// <input type="text">
+// <button>Elegir Módulo</button>
+// </section>
+
+
+function eleccionModulos(){
+   
+    const nombreConsultor = document.createElement("p");
+    nombreConsultor.innerText = "Nombre del consultor";
+
+    const inputConsultor = document.createElement("input");
+    inputConsultor.classList.add("input-consultor");
+    inputConsultor.setAttribute("type", "text")
+
+    const botonElegirModulo = document.createElement("button");
+    botonElegirModulo.innerText = "Elegir Módulo";
+    botonElegirModulo.classList.add("boton-elegir-modulo");
+    botonElegirModulo.addEventListener("click", escogerModulo);
+
+    seccionModulos.append(nombreConsultor, inputConsultor, botonElegirModulo);
+
+
     
+    return max = document.querySelector("#valorModulos").value;
+
+
 }
 
 
-botonModulos.addEventListener("click", seccionModulos);
+botonModulos.addEventListener("click", eleccionModulos);
 
 
 // escogerModulo("juan");
@@ -48,5 +86,5 @@ botonModulos.addEventListener("click", seccionModulos);
 // escogerModulo("carlos");
 // escogerModulo("diana");
 // escogerModulo("jhonatan");
-// escogerModulo("lina");
+// escogerModulo("victor");
 
