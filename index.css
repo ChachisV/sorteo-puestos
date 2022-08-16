@@ -57,6 +57,13 @@ header{
     flex-direction: column;
     align-items: center;
 }
+
+.form-modulo-consultor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .tittle-consultor{
     font-size: 25px;
     font-weight: bold;
