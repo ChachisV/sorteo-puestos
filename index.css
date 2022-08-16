@@ -1,0 +1,112 @@
+:root{
+    --white: #FFFFFF;
+    --rojo-claro: #ff0000
+}
+
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.inactive{
+    display: none;
+}
+
+header{
+    background-color: var(--rojo-claro);
+    color: var(--white);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cuantosModulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuantosModulos h2{
+    text-align: center;
+}
+
+#valorModulos{
+    width: 85px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#botonModulos{
+    background-color: var(--rojo-claro);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    width: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.section-consultores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tittle-consultor{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.input-consultor{
+    width: 350px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.boton-elegir-modulo{
+    background-color: var(--rojo-claro);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    width: 110px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.modulos-finales{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    
+    
+    
+}
+.modulo-final{
+    background-color: var(--rojo-claro);
+    color: var(--white);
+    padding-top: 8px;
+    width: 50px;
+    height: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+footer{
+    position: fixed;
+    padding-left: 8px;
+    padding-right: 8px;
+    bottom: 0;
+    background-color: var(--rojo-claro);
+    color: var(--white);
+}
