@@ -22,7 +22,7 @@ function escogerModulo(){
     let consultor = document.querySelector(".input-consultor").value;
     
     if(modulos.length >= max){
-        alert("ya estan ocupados todos los módulos");
+        alert("ya están ocupados todos los módulos");
     }else {
         if(!modulos.includes(modulo)){     
       
